@@ -23,7 +23,7 @@ const playGame = () => {
             console.log(`Word: ${currentWord()}`);
             let guess = prompt.question('\nGuess a letter: ').toLowerCase();
 
-            if (guess.length === newWord.length || guess.length > 1) { // Guess more than one letter or the length of the word
+            if (guess.length === newWord.length || guess.length > 1) { // Guessed more than one letter or the length of the word
                 console.log('\n\nPlease enter letters one at a time to guess the word.');
             } else if (!guess || !/[a-z]/.test(guess)) { // Empty guess or something other than a letter
                 console.log('\nPlease enter a valid letter.');
@@ -55,7 +55,7 @@ const playGame = () => {
         // Prompt replay of game
         let replayPrompt = prompt.keyInYNStrict(games === 1 ? `\nYou've won ${wins} out of ${games} game. Do you want to play again?` : `\nYou've won ${wins} out of ${games} games. Do you want to play again?`);
         if (replayPrompt) {
-            // Reset variables before starting
+            // Reset variables
             guessedLetters = [];
             newWord = randomWord(wordBank).toLowerCase();
             guesses = 0;
@@ -156,10 +156,10 @@ const displayHangman = () => {
         `,
     ];
 
-    // Display hangman based on incorrect guesses
+    // Display hangman 
     console.log(man[guesses]);
     
 };
 
-// Start game
+// Play game
 playGame();
