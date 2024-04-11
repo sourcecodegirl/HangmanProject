@@ -2,6 +2,8 @@
 
 This is a single player console version of the classic Hangman Game.
 
+A word is chosen randomly from a word bank and displayed with an underscore '**_**' representing each letter of the word. For every incorrect guess, a part of the hangman is displayed.
+
 ## How To Install
 This game requires the console to play.
 
@@ -10,7 +12,6 @@ On this page, click on the '**Code**' button and copy the link.
 In Terminal or Command Line, locate the directory you want to download the files into and enter: **git clone PASTE-URL-HERE**
 
 ## How To Play
-A word is chosen randomly from a word bank and displayed with an underscore '**_**' representing each letter of the word.
 
 ### Commands
 - '**node .**' begins the game
